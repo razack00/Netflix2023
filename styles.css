@@ -1,0 +1,78 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    outline:none
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    background-image: url(./assets/images/momentumbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    color: #fff;
+    padding: 2%;
+}
+
+svg {
+    width: 20px;
+    fill: white;
+}
+
+nav ul, footer ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+nav ul li:first-child, .nav-left-weather, footer ul li:first-child{
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.main-section {
+    align-self: center;
+    text-align: center;
+}
+
+.main-section h1 {
+    font-size: 80px;
+}
+
+.main-section h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.main-section h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-section input {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    width: 80%;
+    outline: red;
+    margin: 15px;
+    color:#fff;
+    font-size: 16px;
+}
+
+.footer-mid {
+    margin-left: -14%;
+}
