@@ -1,0 +1,144 @@
+:root {
+    --nf-red: #e50914;
+    --nf-red-hover: rgb(193,17,25);
+    --text-color: #fff;
+    --primary-font: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    --input-bg-color: rgba(22,22,22,0.7);
+    --input-border-color: rgba(128, 128, 128, 0.7);
+    --footer-text-color: rgba(255, 255, 255, 0.7);
+
+
+    /* pc font sizes */
+    --heading-fs: 48px;
+    --heading-fw:900;
+    --title-fs: 3rem;
+    --title-fw: 900;
+    --subtitle-fs: 1.5rem;
+    --subtitle-fw: 400;
+    --text-fs: 1.25rem;
+    --text-fw: 400;
+
+    /* mobile font sizes */
+    --title-mb-fs: 2.3rem;
+    --title-mb-fw: 700;
+    --subtitle-mb-fs: 1.5rem;
+    --text-mb-fs: 1.125rem;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    color: #fff;
+}
+
+body {
+    background-color: #000;
+}
+
+.nf-hero {
+    background-image: url(./assets/images/heroCM.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.nf-hero-wrapper{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.nf-logo {
+    fill: var(--nf-red);
+    width: 160px;
+    height: 50px
+}
+
+.nf-hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--nf-red);
+    border: 1px solid var(--nf-red);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--nf-red-hover);
+    border:1px solid var(--nf-red-hover) ;
+}
+
+.nf-hero-signin {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem 1.2rem;
+}
+
+.nf-hero-main {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+}
+
+.nf-hero-main-title {
+    font-size: var(--title-fs);
+    font-weight: var(--title-fw)
+}
+
+.nf-hero-main-subtitle {
+    font-size: var(--text-fs);
+    font-weight: var(--text-fw);
+}
+
+.nf-hero-main-form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%
+}
+
+.nf-hero-main-form-input {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+    outline: none;
+    width: 40%;
+    min-width: 200px;
+}
+
+.nf-hero-main-form-btn {
+    display: flex;
+    font-size: var(--subtitle-fs);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0.65rem;
+    white-space: nowrap;
+    width: 12.5rem;
+}
+
+
+
+
