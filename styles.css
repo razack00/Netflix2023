@@ -38,7 +38,7 @@ body {
 }
 
 .nf-hero {
-    background-image: url(./assets/images/heroCM.jpg);
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/heroCM.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,13 +145,16 @@ section {
 }
 .nf-section1 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 80px 5px;
+    justify-content: center;
+    padding: 70px 5px;
+    flex-wrap: wrap;
+    gap: 70px;
 }
 
-.col1 {
-    padding: 30px
+.col {
+    min-width: 40%;
+    width: 45%;
 }
 
  .col1 p {
@@ -159,30 +162,76 @@ section {
 } 
 
 .col1 h2 {
-    padding: 5px;
     font-size: var(--title-fs);
 }
 
-.col1, .col2 {
-    width: 50%;
+.col1 {
+    /* background-color: blue; */
+}
+
+.col2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nf-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     position: relative;
-    height: auto;
+    padding: 15px;
 }
 
 .nf-video img {
-    width: 90%;
+    width: 100%;
+    z-index: 1;
+
 }
 
 .nf-video video {
     position: absolute;
-    top: 60px;;
-    left: 50px;
-    width: 69%;
-    z-index: -1;
+    width: 71%;
+    margin-top: -2% ;
 } 
+
+.video-devices {
+    width: 56.5% !important;
+    margin-top: -24% !important
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 7px;
+    position: absolute;
+    width: 52.5%;
+    z-index: 1;
+    border: 1px solid var(--input-border-color);
+    background-color: #000;
+    font-size: 14px;
+    border-radius: 7px;
+    text-align: left;
+    bottom: 9%;
+}
+
+.card img {
+    width: 48px;
+    margin-left: -10px;
+}
+
+.card>div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(55, 0, 255);
+    font-size: 12px;
+}
 
 @media only screen and (max-width: 962px) {
     .nf-hero-main-title {
@@ -204,6 +253,21 @@ section {
     .container {
         width: 95%;
     }
+
+    .col {
+        min-width: 80%;
+        text-align: center;
+        font-size: var(--text-fs);
+    }
+
+    .col1 h2 {
+        font-size: var(--title-mb-fs);
+    }
+
+
+    .nf-video  {
+        width: 100%
+    } 
 }
 
 @media only screen and (max-width: 636px) {
@@ -212,13 +276,32 @@ section {
     }
 
     .nf-hero-main-form-input{
-        min-width: 100%
+        min-width: 90%
     }
 
     .nf-hero-main-form-btn {
         width: 10rem;
         padding: 0.55rem;
     }
+
+    .nf-logo {
+        fill: var(--nf-red);
+        width: 110px;
+        height: 50px
+    }
+
+    .nf-hero-signin {
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: .3rem 1rem;
+    }
+
+    .col {
+        min-width: 90%;
+        text-align: center;
+        font-size: var(--text-fs);
+    }
+    
 }
 
 
