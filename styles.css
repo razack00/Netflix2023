@@ -1,78 +1,383 @@
+:root {
+    --nf-red: #e50914;
+    --nf-red-hover: rgb(193,17,25);
+    --text-color: #fff;
+    --primary-font: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    --input-bg-color: rgba(22,22,22,0.7);
+    --input-border-color: rgba(128, 128, 128, 0.7);
+    --footer-text-color: rgba(255, 255, 255, 0.7);
 
-* {
-    margin: 0;
+
+    /* pc font sizes */
+    --heading-fs: 48px;
+    --heading-fw:900;
+    --title-fs: 3rem;
+    --title-fw: 900;
+    --subtitle-fs: 1.5rem;
+    --subtitle-fw: 400;
+    --text-fs: 1.25rem;
+    --text-fw: 400;
+
+    /* mobile font sizes */
+    --title-mb-fs: 2.3rem;
+    --title-mb-fw: 700;
+    --subtitle-mb-fs: 1.5rem;
+    --text-mb-fs: 1.125rem;
+}
+
+
+/* General styles */
+*{
+    margin:0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    border: none;
-    outline:none
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--primary-font);
+    color: #fff;
 }
 
-main {
-    background-image: url(./assets/images/momentumbg.jpg);
+body {
+    background-color: #000;
+}
+
+.nf-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 15px;
+    background-color: #fff;
+    color: #000 !important;
+}
+.nf-ad-btn1 {
+    color: #000;
+    background-color: var(--nf-red);
+    padding: 3px 7px;
+    border-radius: 1px solid var(--input-border-color);
+    border-radius: 30px;
+}
+
+.nf-ad p{
+    color: black
+}
+
+.nf-ad-btn2{
+    text-align: left;
+    color: #000;
+    padding: 5px 5px 5px 0px
+}
+
+.nf-hero {
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/heroCM.jpg);
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
-    color: #fff;
-    padding: 2%;
 }
 
-svg {
-    width: 20px;
-    fill: white;
+.container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
 }
 
-nav ul, footer ul {
+.btn {
+    cursor: pointer;
+    background-color: var(--nf-red);
+    border: 1px solid var(--nf-red);
+    border-radius: 5px;
+}
+/* End General styles */
+
+/* header styles */
+.nf-hero-wrapper{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.nf-logo {
+    fill: var(--nf-red);
+    width: 160px;
+    height: 50px
+}
+
+.nf-hero-nav {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    align-items: center;
+    padding: 1rem 1rem;
 }
 
-nav ul li:first-child, .nav-left-weather, footer ul li:first-child{
+.btn:hover {
+    background-color: var(--nf-red-hover);
+    border:1px solid var(--nf-red-hover) ;
+}
+
+.nf-hero-signin {
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .5rem 1.2rem;
+}
+
+.nf-hero-main {
     display: flex;
-    gap: 12px;
-    align-items: center
-}
-
-.main-section {
-    align-self: center;
+    flex-flow: column nowrap;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
 }
 
-.main-section h1 {
-    font-size: 80px;
+.nf-hero-main-title {
+    font-size: var(--title-fs);
+    font-weight: var(--title-fw)
 }
 
-.main-section h3 {
-    font-size: 40px;
-    font-weight: 500;
+.nf-hero-main-subtitle {
+    font-size: var(--text-fs);
+    font-weight: var(--text-fw);
 }
 
-.main-section h4 {
-    font-size: 20px;
-    font-weight: 500;
+.nf-hero-main-form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .8rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%
 }
 
-.main-section input {
-    background-color: transparent;
-    border-bottom: 2px solid white;
-    width: 80%;
-    outline: red;
-    margin: 15px;
-    color:#fff;
-    font-size: 16px;
+.nf-hero-main-form-input {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+    outline: none;
+    width: 40%;
+    min-width: 200px;
 }
 
-.footer-mid {
-    margin-left: -14%;
+.nf-hero-main-form-btn {
+    display: flex;
+    font-size: var(--subtitle-fs);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0.65rem;
+    white-space: nowrap;
+    width: 12.5rem;
 }
+
+/* sections styles*/
+.nf-section {
+    border-top:7px solid var(--input-border-color) ;
+}
+.nf-section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0px;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.col {
+    min-width: 40%;
+    width: 50%;
+}
+
+ .col1 p {
+    font-size: var(--subtitle-fs);
+} 
+
+h2 {
+    font-size: var(--title-fs);
+}
+
+.col1 {
+    /* background-color: blue; */
+}
+
+.col2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nf-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+}
+
+.nf-video img {
+    width: 100%;
+    z-index: 1;
+
+}
+
+.nf-video video {
+    position: absolute;
+    width: 71%;
+    margin-top: -2% ;
+} 
+
+.video-devices {
+    width: 56.5% !important;
+    margin-top: -24% !important
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 7px;
+    position: absolute;
+    width: 52.5%;
+    z-index: 1;
+    border: 1px solid var(--input-border-color);
+    background-color: #000;
+    font-size: 14px;
+    border-radius: 7px;
+    text-align: left;
+    bottom: 9%;
+}
+
+.card img {
+    width: 48px;
+    margin-left: -10px;
+}
+
+.card>div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(55, 0, 255);
+    font-size: 12px;
+}
+/* End section styles */
+
+
+/* FAQ styles */
+.nf-section-faq {
+    text-align: center;
+    padding: 50px 0px;
+} 
+
+.nf-section-faq-container>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--input-border-color);
+    margin: 5px;
+    padding: 15px;
+    font-size: var(--text-fs);
+} 
+
+.nf-section-faq-container {
+    padding: 20px 0px;
+}
+/* End FAQ styles */
+.nf-footer-container {
+    padding-top: 50px;
+}
+.nf-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    padding: 25px 0px;
+}
+
+.nf-footer-nav ul li {
+    list-style-type: none;
+    padding: 3px 0px;
+    margin: 0px;
+}
+
+.nf-footer-nav ul li a {
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 962px) {
+    .nf-hero-main-title {
+        font-size: var(--title-mb-fs);
+        font-weight: var(--title-mb-fw);
+    }
+
+    .nf-hero-main-subtitle {
+        font-size: var(--subtitle-mb-fs);
+    }
+
+    .nf-hero-main-text {
+        font-size: var(--text-mb-fs);
+    }
+
+    .nf-hero {
+        height: 90vh;
+    }
+    .container {
+        width: 95%;
+    }
+
+    .col {
+        min-width: 80%;
+        text-align: center;
+        font-size: var(--text-fs);
+    }
+
+    .col1 h2 {
+        font-size: var(--title-mb-fs);
+    }
+
+
+    .nf-video  {
+        width: 100%
+    } 
+}
+
+@media only screen and (max-width: 636px) {
+    .nf-hero-main-form {
+        width: 100%;
+    }
+
+    .nf-hero-main-form-input{
+        min-width: 90%
+    }
+
+    .nf-hero-main-form-btn {
+        width: 10rem;
+        padding: 0.55rem;
+    }
+
+    .nf-logo {
+        fill: var(--nf-red);
+        width: 110px;
+        height: 50px
+    }
+
+    .nf-hero-signin {
+        text-decoration: none;
+        text-transform: capitalize;
+        padding: .3rem 1rem;
+    }
+
+    .col {
+        min-width: 90%;
+        text-align: center;
+        font-size: var(--text-fs);
+    }
+    
+}
+
+
