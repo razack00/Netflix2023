@@ -25,6 +25,8 @@
     --text-mb-fs: 1.125rem;
 }
 
+
+/* General styles */
 *{
     margin:0;
     padding: 0;
@@ -51,6 +53,15 @@ body {
     height: 100%;
 }
 
+.btn {
+    cursor: pointer;
+    background-color: var(--nf-red);
+    border: 1px solid var(--nf-red);
+    border-radius: 5px;
+}
+/* End General styles */
+
+/* header styles */
 .nf-hero-wrapper{
     height: 100%;
     display: flex;
@@ -68,13 +79,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
-}
-
-.btn {
-    cursor: pointer;
-    background-color: var(--nf-red);
-    border: 1px solid var(--nf-red);
-    border-radius: 5px;
 }
 
 .btn:hover {
@@ -139,29 +143,29 @@ body {
     width: 12.5rem;
 }
 
-/* styling section 1 */
-section {
+/* sections styles*/
+.nf-section {
     border-top:7px solid var(--input-border-color) ;
 }
 .nf-section1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 70px 5px;
+    padding: 70px 0px;
     flex-wrap: wrap;
-    gap: 70px;
+    gap: 0px;
 }
 
 .col {
     min-width: 40%;
-    width: 45%;
+    width: 50%;
 }
 
  .col1 p {
     font-size: var(--subtitle-fs);
 } 
 
-.col1 h2 {
+h2 {
     font-size: var(--title-fs);
 }
 
@@ -232,6 +236,51 @@ section {
     color: rgb(55, 0, 255);
     font-size: 12px;
 }
+/* End section styles */
+
+
+/* FAQ styles */
+.nf-section-faq {
+    text-align: center;
+    padding: 50px 0px;
+} 
+
+.nf-section-faq-container>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--input-border-color);
+    margin: 5px;
+    padding: 15px;
+    font-size: var(--text-fs);
+} 
+
+.nf-section-faq-container {
+    padding: 20px 0px;
+}
+/* End FAQ styles */
+.nf-footer-container {
+    padding-top: 50px;
+}
+.nf-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    padding: 25px 0px;
+}
+
+.nf-footer-nav ul li {
+    list-style-type: none;
+    padding: 3px 0px;
+    margin: 0px;
+}
+
+.nf-footer-nav ul li a {
+    text-decoration: none;
+}
+
+
+
 
 @media only screen and (max-width: 962px) {
     .nf-hero-main-title {
