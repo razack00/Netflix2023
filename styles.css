@@ -39,6 +39,33 @@ body {
     background-color: #000;
 }
 
+.nf-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 15px;
+    background-color: #fff;
+    color: #000 !important;
+}
+.nf-ad-btn1 {
+    color: #000;
+    background-color: var(--nf-red);
+    padding: 3px 7px;
+    border-radius: 1px solid var(--input-border-color);
+    border-radius: 30px;
+}
+
+.nf-ad p{
+    color: black
+}
+
+.nf-ad-btn2{
+    text-align: left;
+    color: #000;
+    padding: 5px 5px 5px 0px
+}
+
 .nf-hero {
     background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/heroCM.jpg);
     background-position: center;
