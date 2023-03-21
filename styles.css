@@ -196,10 +196,6 @@ h2 {
     font-size: var(--title-fs);
 }
 
-.col1 {
-    /* background-color: blue; */
-}
-
 .col2{
     display: flex;
     align-items: center;
@@ -272,23 +268,28 @@ h2 {
     padding: 50px 0px;
 } 
 
-.nf-section-faq-container>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nf-section-faq-container {
+    padding: 20px 0px;
+}
+
+.nf-section-faq-container>details {
     background-color: var(--input-border-color);
     margin: 5px;
     padding: 22px;
     font-size: var(--text-fs);
 } 
 
-.nf-section-faq-container {
-    padding: 20px 0px;
-}
+.sum-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
 
 .plus {
     width: 25px;
     fill: var(--text-color);
+    z-index: 222;
 }
 /* End FAQ styles */
 .nf-footer-container {
