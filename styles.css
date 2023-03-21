@@ -196,10 +196,6 @@ h2 {
     font-size: var(--title-fs);
 }
 
-.col1 {
-    /* background-color: blue; */
-}
-
 .col2{
     display: flex;
     align-items: center;
@@ -272,28 +268,38 @@ h2 {
     padding: 50px 0px;
 } 
 
-.nf-section-faq-container>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nf-section-faq-container {
+    padding: 20px 0px;
+}
+
+.nf-section-faq-container>details {
     background-color: var(--input-border-color);
     margin: 5px;
-    padding: 15px;
+    padding: 22px;
     font-size: var(--text-fs);
 } 
 
-.nf-section-faq-container {
-    padding: 20px 0px;
+.sum-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+.plus {
+    width: 25px;
+    fill: var(--text-color);
+    z-index: 222;
 }
 /* End FAQ styles */
 .nf-footer-container {
     padding-top: 50px;
 }
-.nf-footer-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    padding: 25px 0px;
+.nf-footer-nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: 180px;
+    margin: 30px 0px;
 }
 
 .nf-footer-nav ul li {
@@ -302,11 +308,30 @@ h2 {
     margin: 0px;
 }
 
-.nf-footer-nav ul li a {
-    text-decoration: none;
+.lang {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--text-color);
+    align-self: flex-start;
+    width: fit-content;
+    padding: 4px 14px;
+    border-radius: 5px;
 }
 
+.globe, .dropdown {
+    width: 18px;
+    fill: var(--text-color);
+}
 
+.dropdown {
+    width: 12px
+}
+
+.nf-footer-cm {
+    padding: 30px 0px
+}
 
 
 @media only screen and (max-width: 962px) {
@@ -327,7 +352,7 @@ h2 {
         height: 90vh;
     }
     .container {
-        width: 95%;
+        width: 85%;
     }
 
     .col {
@@ -344,6 +369,10 @@ h2 {
     .nf-video  {
         width: 100%
     } 
+    .nf-footer-nav ul {
+        height: 140px;
+    }
+    
 }
 
 @media only screen and (max-width: 636px) {
@@ -376,6 +405,10 @@ h2 {
         min-width: 90%;
         text-align: center;
         font-size: var(--text-fs);
+    }
+
+    .nf-footer-nav ul {
+        height: 100%;
     }
     
 }
