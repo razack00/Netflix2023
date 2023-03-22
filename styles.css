@@ -6,7 +6,8 @@
     --input-bg-color: rgba(22,22,22,0.7);
     --input-border-color: rgba(128, 128, 128, 0.7);
     --footer-text-color: rgba(255, 255, 255, 0.7);
-
+    --dark-gray: #232323;
+    --light-gray: rgba(201, 201, 201, 0.7);
 
     /* pc font sizes */
     --heading-fs: 48px;
@@ -75,7 +76,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 75%;
     margin: auto;
     height: 100%;
 }
@@ -172,7 +173,7 @@ body {
 
 /* sections styles*/
 .nf-section {
-    border-top:7px solid var(--input-border-color) ;
+    border-top:7px solid var(--dark-gray) ;
 }
 .nf-section1 {
     display: flex;
@@ -270,21 +271,32 @@ h2 {
 
 .nf-section-faq-container {
     padding: 20px 0px;
+    text-align: left;
 }
 
 .nf-section-faq-container>details {
-    background-color: var(--input-border-color);
+    background-color: var(--dark-gray);
     margin: 5px;
-    padding: 22px;
-    font-size: var(--text-fs);
+    font-size: var(--subtitle-fs);
+
 } 
 
-.sum-p {
+.nf-section-faq-container details summary {
+    list-style-type: none;
+    padding: 22px;
+    border-bottom: 1px solid black;
+} 
+
+.nf-section-faq-container details summary p {
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
+}
 
+.answer {
+    padding: 22px;
+}
 
 .plus {
     width: 25px;
@@ -294,6 +306,7 @@ h2 {
 /* End FAQ styles */
 .nf-footer-container {
     padding-top: 50px;
+    color: var(--light-gray)
 }
 .nf-footer-nav ul {
     display: flex;
@@ -308,6 +321,10 @@ h2 {
     margin: 0px;
 }
 
+.nf-section a {
+    color: var(--light-gray)
+}
+
 .lang {
     display:flex;
     justify-content: center;
@@ -316,7 +333,7 @@ h2 {
     border: 1px solid var(--text-color);
     align-self: flex-start;
     width: fit-content;
-    padding: 4px 14px;
+    padding: 6px;
     border-radius: 5px;
 }
 
@@ -325,12 +342,24 @@ h2 {
     fill: var(--text-color);
 }
 
-.dropdown {
-    width: 12px
+select {
+    display: flex;
+    align-items: ;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    list-style-type: none;
+    width: 80px;
+    text-align: right;
+    margin-left: -20px;
+}
+
+option {
 }
 
 .nf-footer-cm {
-    padding: 30px 0px
+    padding: 30px 0px;
+    color: var(--light-gray)
 }
 
 
@@ -351,9 +380,6 @@ h2 {
     .nf-hero {
         height: 90vh;
     }
-    .container {
-        width: 85%;
-    }
 
     .col {
         min-width: 80%;
@@ -363,6 +389,10 @@ h2 {
 
     .col1 h2 {
         font-size: var(--title-mb-fs);
+    }
+
+    .container {
+        width: 90%;
     }
 
 
