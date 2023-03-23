@@ -343,9 +343,6 @@ h2 {
 }
 
 select {
-    display: flex;
-    align-items: ;
-    justify-content: center;
     background-color: transparent;
     border: none;
     list-style-type: none;
