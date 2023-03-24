@@ -151,3 +151,46 @@ footer {
 footer a {
     color: var(--light-gray)
 }
+
+@media only screen and (max-width: 740px) {
+    body{
+        background-image: none;
+        background-color: #000;
+    }
+    nav {
+        width: 100% !important;
+        padding: 15px
+    }
+
+    .nf-logo {
+        width: 80px;
+        height: 20px
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    main {
+        width: 100%;
+        padding: 0% 5%;
+        height: auto;
+    }
+    .nf-signin-wrapper {
+        width: 100%;
+    }
+
+    footer {
+        background-color: #000000af;
+        margin: auto;
+        border-top: 1px solid var(--light-gray);
+    }
+    
+}
+
+@media only screen and (max-width: 440px) {
+    .nf-footer-nav ul {
+        height: 100px;
+    }
+    
+}
