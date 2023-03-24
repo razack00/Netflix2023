@@ -126,3 +126,28 @@ p {
 .security {
     font-size: 13px;
 }
+
+footer {
+    background-color: #000000af;
+    margin-top: 100px;
+}
+
+.nf-footer-container {
+    padding: 40px 0px;
+    color: var(--light-gray)
+}
+.nf-footer-nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: 80px;
+    margin: 10px 0px;
+}
+
+.nf-footer-nav ul li {
+    list-style-type: none;
+    padding: 3px 0px;
+}
+
+footer a {
+    color: var(--light-gray)
+}
