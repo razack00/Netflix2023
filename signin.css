@@ -1,0 +1,196 @@
+:root {
+    --nf-red: #e50914;
+    --nf-red-hover: rgb(193,17,25);
+    --text-color: #fff;
+    --primary-font: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    --input-bg-color: #333;
+    --input-border-color: rgba(128, 128, 128, 0.7);
+    --footer-text-color: rgba(255, 255, 255, 0.7);
+    --dark-gray: #232323;
+    --light-gray: #8c8c8c;
+
+    /* pc font sizes */
+    --heading-fs: 48px;
+    --heading-fw:900;
+    --title-fs: 3rem;
+    --title-fw: 900;
+    --subtitle-fs: 1.5rem;
+    --subtitle-fw: 400;
+    --text-fs: 1.25rem;
+    --text-fw: 400;
+
+    /* mobile font sizes */
+    --title-mb-fs: 2.3rem;
+    --title-mb-fw: 700;
+    --subtitle-mb-fs: 1.5rem;
+    --text-mb-fs: 1.125rem;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    color: var(--light-gray);
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    /* font-size: var(--text-mb-fs); */
+}
+
+body {
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/heroCM.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+nav {
+    width: 95% !important;
+    margin: auto;
+    padding: 20px;
+}
+
+.nf-logo {
+    fill: var(--nf-red);
+    width: 160px;
+    height: 50px
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000af;
+    width: 450px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 60px;
+    border-radius: 5px;
+}
+
+.nf-signin-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn {
+    background-color: var(--nf-red)!important;
+    font-weight: 600!important;
+    color: var(--text-color)
+}
+
+.input_field {
+    background-color: var(--input-bg-color);
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    padding: 17px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.nf_check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+p {
+    padding: 10px 0px;
+}
+
+.captcha-area {
+
+    margin-block: 30px 60px
+}
+.security {
+    font-size: 13px;
+}
+
+footer {
+    background-color: #000000af;
+    margin-top: 100px;
+}
+
+.nf-footer-container {
+    padding: 40px 0px;
+    color: var(--light-gray)
+}
+.nf-footer-nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: 80px;
+    margin: 10px 0px;
+}
+
+.nf-footer-nav ul li {
+    list-style-type: none;
+    padding: 3px 0px;
+}
+
+footer a {
+    color: var(--light-gray)
+}
+
+@media only screen and (max-width: 740px) {
+    body{
+        background-image: none;
+        background-color: #000;
+    }
+    nav {
+        width: 100% !important;
+        padding: 15px
+    }
+
+    .nf-logo {
+        width: 80px;
+        height: 20px
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    main {
+        width: 100%;
+        padding: 0% 5%;
+        height: auto;
+    }
+    .nf-signin-wrapper {
+        width: 100%;
+    }
+
+    footer {
+        background-color: #000000af;
+        margin: auto;
+        border-top: 1px solid var(--light-gray);
+    }
+    
+}
+
+@media only screen and (max-width: 440px) {
+    .nf-footer-nav ul {
+        height: 100px;
+    }
+    
+}
