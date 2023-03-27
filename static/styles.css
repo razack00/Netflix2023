@@ -68,7 +68,7 @@ body {
 }
 
 .nf-hero {
-    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/heroCM.jpg);
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(../assets/images/heroCM.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
